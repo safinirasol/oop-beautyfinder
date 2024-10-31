@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Beauty Finder</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wdth,wght@113.4,100..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1><a href="index.html" id="h1_header">Beauty Finder</a></h1>
+        <nav class="button_header">
+            <a href="index.html">Home &#711;</a>
+            <a href="type.html">Most Loved Type &#711;</a>
+            <a href="wishlist.html">Wishlist &#711;</a> 
+                    
+        </nav>
+    </header>
+    
+    <div id="big_title">
+        <h1>Beauty Finder</h1>
+        <h2>~Your beauty starts from here~</h2>
+    </div>
+    <div id="brands-rec">
+      <h2>Top Recommended Brands</h2>
+    </div>
+    
+    <div class="product-container1" id="productContainer1">
+      <div class="product-card1">
+          <img src="images/milani.jpg" alt="">
+          <h3>Milani</h3>
+          <button id="button22" onclick="displayRecommendedBrand('milani')">See more</button>
+      </div>
+      <div class="product-card1">
+          <img src="images/maybelline.jpg" alt="">
+          <h3>Maybelline</h3>
+          <button id="button22" onclick="displayRecommendedBrand('maybelline')">See more</button>
+      </div>
+      <div class="product-card1">
+          <img src="images/e.l.f..jpg" alt="">
+          <h3>e.l.f</h3>
+          <button id="button22" onclick="displayRecommendedBrand('e.l.f.')">See more</button>
+      </div>
+      <div class="product-card1">
+          <img src="images/loreal.jpg" alt="">
+          <h3>L'oreal</h3>
+          <button id="button22" onclick="displayRecommendedBrand('l%27oreal')">See more</button>
+      </div>
+    </div>
+    
+    <div id="search_campaign" class="search-container">
+      <input type="text" name="campaign_name" id="makeup_brand" placeholder="Search Brands..(milani)" required />
+      <button type="submit" class="search-button" onclick="searchClicked()">Search</button>
+    </div>
+    
+    <div class="filter-container">
+      <div class="filter-header">
+          <span>Filter Products</span>
+      </div>
+  
+      <div class="filter-section">
+          <div class="filter-section-title" onclick="toggleSection(this)">
+              Price
+          </div>
+          <div class="collapsible-content">
+              <div class="filter-option">
+                <input type="checkbox" id="price1" name="price" value="0-9.99">
+                <label for="price0">$0.00 - $9.99</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="price2" name="price" value="10-19.99">
+                <label for="price1">$10.00 - $19.99</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="price3" name="price" value="20-100">
+                <label for="price2">$20.00 and above</label>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="product-container" id="productContainer"></div>
+
+    <script src="fetchmakeup.js"></script>
+    <footer>
+        <p>&copy; 2024 by Beauty Finder | Privacy Policy | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
